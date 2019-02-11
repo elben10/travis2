@@ -15,7 +15,7 @@ matrix:
       language: sh
       before_install: 
         - source scripts/windows.sh
-    - env: ALLOW_FAILURE=TRUE PYTHON_VERSION="3.8.0-a1"
+    - env: ALLOW_FAILURE=TRUE PYTHON_VERSION=${PYTHON38}
       os: windows
       language: sh
       before_install: 
