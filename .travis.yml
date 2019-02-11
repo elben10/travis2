@@ -1,6 +1,8 @@
 language: python
 
 matrix:
+  allow_failures:
+    - env: ALLOW_FAILURE=TRUE
   include:
     - env: ALLOW_FAILURE=TRUE
       os: windows
