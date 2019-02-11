@@ -5,7 +5,7 @@ requirements = [
     "pandas",
 ]
 
-setup_requirements [
+setup_requirements = [
     "pytest-runner"
 ]
 
