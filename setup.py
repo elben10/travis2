@@ -1,6 +1,8 @@
 from setuptools import find_packages, setup
 
-requirements = []
+docs_requirements = []
+
+installation_requirements = []
 
 setup_requirements = [
     "pytest-runner"
@@ -19,10 +21,11 @@ setup(
     author_email='author@gmail.com',
     description='Description of my package',
     packages=find_packages(),    
-    install_requires=requirements,
+    install_requires=installation_requirements,
     setup_requires=setup_requirements,
     test_require=test_requirements,
     extras_require={
-        'docs': []
+        'docs': docs_requirements,
+        'test': test_requirements,
     }
 )
