@@ -21,7 +21,8 @@ setup(
     packages=find_packages(),    
     install_requires=requirements,
     setup_requires=setup_requirements,
+    test_require=test_requirements,
     extras_require={
-        'testing': test_requirements
+        'docs': []
     }
 )
