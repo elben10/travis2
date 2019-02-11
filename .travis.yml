@@ -20,7 +20,9 @@ matrix:
       language: sh
       before_install: 
         - source scripts/windows.sh
-        
-      
+
+install:
+  - pip install -rrequirements.txt
+  
 script:
   - python --version
