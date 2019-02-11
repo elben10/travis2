@@ -1,4 +1,4 @@
-if [ "${PYTHON_VERSION}" == "3.8-dev" ]
+if [ "${PYTHON_VERSION:0:3}" == "3.8" ]
 then
   choco install python --version ${PYTHON_VERSION} --pre
 else
