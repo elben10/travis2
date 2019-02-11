@@ -67,10 +67,8 @@ matrix:
 
 install:
   - python --version
-  - pip install --upgrade pip
-  - pip install .
-  - pip install .[docs]
-  - pip install .[test]
+  - python -m pip install --upgrade pip
+  - python -m pip install . .[docs] .[test]
   
 script:
   - python setup.py pytest
