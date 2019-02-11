@@ -23,4 +23,4 @@ matrix:
         
       
 script:
-  - pip install -rrequirements.txt
+  - python --version
