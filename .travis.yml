@@ -71,5 +71,6 @@ install:
   
 script:
   - python --version
-  - python setup.py install
+  - pip install .
+  - pip install .[testing]
   - python setup.py pytest
