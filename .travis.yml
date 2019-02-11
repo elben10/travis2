@@ -5,24 +5,21 @@ env:
     - PYTHON36="3.6.8"
     - PYTHON37="3.7.2"
     - PYTHON38="3.8-dev"
-    - 
 
 matrix:
   allow_failures:
     - env: ALLOW_FAILURE=TRUE
   include:
-    - env: ALLOW_FAILURE=FALSE
+    - env: ALLOW_FAILURE=FALSE PYTHON_VERSION=${PYTHON37}
       os: windows
       language: sh
       before_install: 
-        - choco install python --version 3.7.2
-        - export PATH="/c/python37/scripts:/c/python37/:$PATH"
-    - env: ALLOW_FAILURE=TRUE
+        - source scripts/windows.sh
+    - env: ALLOW_FAILURE=TRUE PYTHON_VERSION="3.8.0-a1"
       os: windows
       language: sh
       before_install: 
-        - choco install python --version 3.8.0-a1 --pre
-        - export PATH="/c/python38/scripts:/c/python38/:$PATH"
+        - source scripts/windows.sh
         
       
 script:
