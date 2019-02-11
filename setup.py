@@ -1,16 +1,14 @@
 from setuptools import find_packages, setup
 
-requirements = [
-    "numpy",
-    "pandas",
-]
+requirements = []
 
 setup_requirements = [
     "pytest-runner"
 ]
 
 test_requirements = [
-    "pytest"
+    "pytest",
+    "cerberus",
 ]
 
 setup(
@@ -23,5 +21,7 @@ setup(
     packages=find_packages(),    
     install_requires=requirements,
     setup_requires=setup_requirements,
-    test_requires=test_requirements,
+    extras_require={
+        'testing': test_requirements
+    }
 )
