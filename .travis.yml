@@ -11,6 +11,11 @@ matrix:
     - env: PYTHON_VERSION=${PYTHON38}
   include:
     - env: PYTHON_VERSION=${PYTHON37}
+      os: osx
+      language: sh
+      before_install: 
+        - source scripts/osx.sh
+    - env: PYTHON_VERSION=${PYTHON37}
       os: windows
       language: sh
       before_install: 
