@@ -6,6 +6,12 @@ matrix:
       language: sh
       before_install: 
         - choco install python --version 3.7.2
+        - export PATH="/c/python37/scripts:/c/python37/:$PATH"
+  allow_failures:
+    - os: windows
+      language: sh
+      before_install: 
+        - choco install python --version 3.7.2
         - export PATH="/c/python37/scripts:/c/python37/:$PATH"; 
         
       
