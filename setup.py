@@ -23,7 +23,6 @@ setup(
     packages=find_packages(),    
     install_requires=installation_requirements,
     setup_requires=setup_requirements,
-    test_require=test_requirements,
     extras_require={
         'docs': docs_requirements,
         'test': test_requirements,
