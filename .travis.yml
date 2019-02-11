@@ -8,14 +8,14 @@ env:
 
 matrix:
   allow_failures:
-    - env: ALLOW_FAILURE=TRUE
+    - env: PYTHON_VERSION=${PYTHON38}
   include:
-    - env: ALLOW_FAILURE=FALSE PYTHON_VERSION=${PYTHON37}
+    - env: PYTHON_VERSION=${PYTHON37}
       os: windows
       language: sh
       before_install: 
         - source scripts/windows.sh
-    - env: ALLOW_FAILURE=TRUE PYTHON_VERSION=${PYTHON38}
+    - env: PYTHON_VERSION=${PYTHON38}
       os: windows
       language: sh
       before_install: 
