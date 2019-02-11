@@ -1,27 +1,15 @@
-language: php
+language: python
+
 matrix:
   include:
-  - php: 7.0
-    env: KEY=VALUE
+    - env: ALLOW_FAILURE=TRUE
+      os: windows
+      language: sh
+      before_install: 
+        - choco install python --version 3.7.2
+        - export PATH="/c/python37/scripts:/c/python37/:$PATH"
   allow_failures:
-  - php: 7.0
-    env: KEY3=VALUE2
-
-# language: python
-
-# matrix:
-#   include:
-#     - os: windows
-#       language: sh
-#       before_install: 
-#         - choco install python --version 3.7.2
-#         - export PATH="/c/python37/scripts:/c/python37/:$PATH"
-#   allow_failures:
-#     - os: windows
-#       language: sh
-#       before_install: 
-#         - choco install python --version 3.7.2
-#         - export PATH="/c/python37/scripts:/c/python37/:$PATH"; 
+    - env: ALLOW_FAILURE=TRUE
         
       
 script:
