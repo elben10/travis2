@@ -19,6 +19,7 @@ matrix:
       sudo: true
       
     - name: "Linux: Python3.8-dev"
+      env: PYTHON_VERSION=${PYTHON38}
       python: 3.8-dev
       dist: xenial
       sudo: true
