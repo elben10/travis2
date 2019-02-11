@@ -9,6 +9,7 @@ env:
 matrix:
   allow_failures:
     - env: PYTHON_VERSION=${PYTHON38}
+    
   include:
     - name: "Linux: Python3.6"
       python: 3.6
@@ -58,6 +59,7 @@ matrix:
       env: PYTHON_VERSION=${PYTHON37}
       before_install: 
         - source scripts/windows.sh
+        
     - name: "Windows: Python3.8-dev"
       os: windows
       language: sh
